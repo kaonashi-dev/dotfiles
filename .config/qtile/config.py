@@ -1,4 +1,4 @@
-
+# Configuration for Qtile
 # samueldlh
 
 from typing import List
@@ -29,7 +29,6 @@ keys = [
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
-    # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),desc="Toggle between split and unsplit sides of stack"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
@@ -91,9 +90,7 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
-                    chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
-                    },
+                    chords_colors={'launch': ("#ff0000", "#ffffff"),},
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),

@@ -13,15 +13,15 @@ terminal = guess_terminal()
 
 keys = [
     # Switch between windows in current stack pane
-    Key([mod], "k", lazy.layout.down(), desc="Move focus down in stack pane"),
-    Key([mod], "j", lazy.layout.up(), desc="Move focus up in stack pane"),
+    Key([mod], "k", lazy.layout.down()),
+    Key([mod], "j", lazy.layout.up()),
 
     # Move windows up or down in current stack
     Key([mod, "control"], "k", lazy.layout.shuffle_down(), desc="Move window down in current stack "),
     Key([mod, "control"], "j", lazy.layout.shuffle_up(), desc="Move window up in current stack "),
 
     # Switch window focus to other pane(s) of stack
-    Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
+    Key([mod], "space", lazy.layout.next()),
 
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate(),desc="Swap panes of split stack"),
@@ -30,11 +30,13 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),desc="Toggle between split and unsplit sides of stack"),
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    # Launch terminal
+    Key([mod], "Return", lazy.spawn(terminal)),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
+    # Close windows
+    Key([mod], "w", lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
@@ -42,6 +44,7 @@ keys = [
 
     #Apps
     Key([mod], "m", lazy.spawn("rofi -show run")),
+    #Browser
     Key([mod], "b", lazy.spawn("brave")),
 
 ]

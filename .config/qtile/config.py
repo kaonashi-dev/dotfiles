@@ -36,7 +36,7 @@ keys = [
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     # Close windows
-    Key([mod], "w", lazy.window.kill()),
+    Key([mod, "shift"], "w", lazy.window.kill()),
 
     # Restart qtile
     Key([mod, "control"], "r", lazy.restart()),

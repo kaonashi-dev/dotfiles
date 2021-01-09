@@ -38,14 +38,15 @@ keys = [
     # Close windows
     Key([mod], "w", lazy.window.kill()),
 
-    Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
-    Key([mod], "r", lazy.spawncmd(),desc="Spawn a command using a prompt widget"),
+    # Restart qtile
+    Key([mod, "control"], "r", lazy.restart()),
+    # Shutdown qtile 
+    Key([mod, "control"], "q", lazy.shutdown()),
 
     #Apps
     Key([mod], "m", lazy.spawn("rofi -show run")),
     #Browser
-    Key([mod], "b", lazy.spawn("brave")),
+    Key([mod], "b", lazy.spawn("firefox-developer-edition")),
 
 ]
 

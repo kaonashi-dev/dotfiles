@@ -68,7 +68,7 @@ layouts = [
     # layout.Bsp(),
     # layout.Columns(),
     # layout.Matrix(),
-    # layout.MonadTall(),
+    layout.MonadTall(border_focus="#ffffff", border_width=1, margin=5),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),

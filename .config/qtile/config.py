@@ -63,7 +63,7 @@ for i, group in enumerate(groups):
 
 layouts = [
     layout.Max(),
-    layout.Stack(num_stacks=2),
+    # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
     # layout.Columns(),
@@ -98,8 +98,9 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
+                widget.Battery(format='{percent:2.0%} '),
                 widget.Clock(format='%Y-%m-%d'),
-                widget.QuickExit(default_text="")
+                widget.QuickExit(default_text="",countdown_format='{}', countdown_start=3)
             ],
             24,
         ),

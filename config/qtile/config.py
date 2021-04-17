@@ -59,7 +59,7 @@ keys = [
 
 ]
 
-groups = [Group(i) for i in ["","", "", ""]]
+groups = [Group(i) for i in ["I","II", "III", "IV"]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -71,7 +71,7 @@ for i, group in enumerate(groups):
     ])
 
 layouts = [
-    layout.MonadTall(border_focus="#ffffff", border_width=1, margin=5),
+    layout.MonadTall(border_focus="#000000", border_width=1, margin=5),
     layout.Max(),
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
@@ -98,7 +98,7 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayout(),
+                # widget.CurrentLayout(),
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),

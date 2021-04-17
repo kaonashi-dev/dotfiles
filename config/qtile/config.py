@@ -44,7 +44,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown()),
 
     #Apps
-    Key([mod], "m", lazy.spawn("rofi -show run")),
+    Key([mod, "shift"], "m", lazy.spawn("rofi -show run")),
     #Browser
     Key([mod], "b", lazy.spawn("firefox-developer-edition")),
 
@@ -53,7 +53,7 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
 
-    # Brightness
+    # Brillo
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 
@@ -71,13 +71,13 @@ for i, group in enumerate(groups):
     ])
 
 layouts = [
+    layout.MonadTall(border_focus="#ffffff", border_width=1, margin=5),
     layout.Max(),
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
     # layout.Columns(),
     # layout.Matrix(),
-    layout.MonadTall(border_focus="#ffffff", border_width=1, margin=5),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),

@@ -59,7 +59,7 @@ keys = [
 
 ]
 
-groups = [Group(i) for i in ["I","II", "III", "IV"]]
+groups = [Group(i) for i in ["1","2", "3", "4", "5"]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -71,7 +71,7 @@ for i, group in enumerate(groups):
     ])
 
 layouts = [
-    layout.MonadTall(border_focus="#000000", border_width=1, margin=5),
+    layout.MonadTall(border_focus="#000000", border_width=1, margin=3),
     layout.Max(),
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
@@ -98,8 +98,7 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                # widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(active='#ffffff',),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -107,11 +106,12 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
+                widget.CurrentLayout(),
                 widget.Battery(format='{percent:2.0%} '),
                 widget.Clock(format='%Y-%m-%d'),
                 widget.QuickExit(default_text="",countdown_format='{}', countdown_start=3)
             ],
-            24,
+            19,
         ),
     ),
 ]

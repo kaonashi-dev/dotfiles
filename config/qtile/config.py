@@ -3,13 +3,21 @@
 
 from typing import List
 
-from libqtile import bar, layout, widget
+import os
+import subprocess
+
+from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = guess_terminal()
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~')
+    subprocess.Popen([home + '/.config/qtile/autostart.sh'])
 
 keys = [
     # Switch between windows in current stack pane
@@ -38,6 +46,9 @@ keys = [
     # Close windows
     Key([mod, "shift"], "w", lazy.window.kill()),
 
+    #Focus of monitors
+    Key([mod], "comma", lazy.prev_screen()),
+
     # Restart qtile
     Key([mod, "control"], "r", lazy.restart()),
     # Shutdown qtile 
@@ -47,6 +58,9 @@ keys = [
     Key([mod, "shift"], "m", lazy.spawn("rofi -show run")),
     #Browser
     Key([mod], "b", lazy.spawn("firefox-developer-edition")),
+
+    #screenshot
+    Key([mod, "shift"], "p", lazy.spawn("imlib2_grab screenshot.png")),
 
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),

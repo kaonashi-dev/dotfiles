@@ -48,6 +48,9 @@ keys = [
 
     #Focus of monitors
     Key([mod], "comma", lazy.prev_screen()),
+    # Window size
+    Key([mod, "shift"], "u", lazy.layout.grow()),
+    Key([mod, "shift"], "i", lazy.layout.shrink()),
 
     # Restart qtile
     Key([mod, "control"], "r", lazy.restart()),

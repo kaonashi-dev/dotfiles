@@ -49,8 +49,8 @@ keys = [
     #Focus of monitors
     Key([mod], "comma", lazy.prev_screen()),
     # Window size
-    Key([mod, "shift"], "u", lazy.layout.grow()),
-    Key([mod, "shift"], "i", lazy.layout.shrink()),
+    Key([mod, "shift"], "h", lazy.layout.grow()),
+    Key([mod, "shift"], "l", lazy.layout.shrink()),
 
     # Restart qtile
     Key([mod, "control"], "r", lazy.restart()),
@@ -60,7 +60,9 @@ keys = [
     #Apps
     Key([mod, "shift"], "m", lazy.spawn("rofi -show run")),
     #Browser
-    Key([mod], "b", lazy.spawn("firefox-developer-edition")),
+    Key([mod, "shift"], "f", lazy.spawn("firefox-developer-edition")),
+    #Files
+    Key([mod, "shift"], "e", lazy.spawn("thunar")),
 
     #screenshot
     Key([mod, "shift"], "p", lazy.spawn("imlib2_grab screenshot.png")),

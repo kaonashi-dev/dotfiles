@@ -58,7 +58,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown()),
 
     #Apps
-    Key([mod, "shift"], "m", lazy.spawn("rofi -show run")),
+    Key([mod, "shift"], "m", lazy.spawn('rofi -modi drun,run -show drun -show-icons')),
     #Browser
     Key([mod, "shift"], "f", lazy.spawn("firefox-developer-edition")),
     #Files
@@ -128,7 +128,6 @@ screens = [
                 widget.CurrentLayout(),
                 widget.Battery(format='{percent:2.0%} '),
                 widget.Clock(format='%Y-%m-%d'),
-                widget.QuickExit(default_text="",countdown_format='{}', countdown_start=3)
             ],
             19,
         ),

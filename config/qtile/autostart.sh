@@ -2,4 +2,8 @@
 
 volumeicon &
 
+picom &
+
+nm-applet &
+
 nitrogen --restore

@@ -31,9 +31,6 @@ keys = [
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next()),
 
-    # Swap panes of split stack
-    Key([mod, "shift"], "space", lazy.layout.rotate(),desc="Swap panes of split stack"),
-
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -49,8 +46,8 @@ keys = [
     #Focus of monitors
     Key([mod], "comma", lazy.prev_screen()),
     # Window size
-    Key([mod, "shift"], "h", lazy.layout.grow()),
-    Key([mod, "shift"], "l", lazy.layout.shrink()),
+    Key([mod, "shift"], "k", lazy.layout.grow()),
+    Key([mod, "shift"], "j", lazy.layout.shrink()),
 
     # Restart qtile
     Key([mod, "control"], "r", lazy.restart()),
@@ -78,7 +75,7 @@ keys = [
 
 ]
 
-groups = [Group(i) for i in ["1","2", "3", "4", "5"]]
+groups = [Group(i) for i in ["WWW","DEV", "TERM", "MIXED"]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -115,10 +112,16 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
-                widget.GroupBox(active='#ffffff',),
-                widget.Prompt(),
+                widget.GroupBox(
+                    foreground='#ffffff',
+                    active='#ffffff',
+                    fontsize=11,
+                    borderwidth=1,
+                    highlight_method='block',
+                    this_current_screen_border=['#c80ebc', '#c80ebc'],
+                ),
                 widget.WindowName(),
                 widget.Chord(
                     chords_colors={'launch': ("#ff0000", "#ffffff"),},
@@ -126,7 +129,6 @@ screens = [
                 ),
                 widget.Systray(),
                 widget.CurrentLayout(),
-                widget.Battery(format='{percent:2.0%} '),
                 widget.Clock(format='%Y-%m-%d'),
             ],
             19,

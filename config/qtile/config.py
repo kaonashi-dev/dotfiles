@@ -5,11 +5,38 @@ from typing import List
 
 import os
 import subprocess
+import socket
+
+from setting.theme import colors
+from setting.keys import keys_main
 
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+
+def base(fg, bg): 
+    return {
+        'foreground': colors[fg],
+        'background': colors[bg],
+    }
+
+def icon(fg, bg, fz, txt): 
+    return {
+        'foreground': colors[fg],
+        'background': colors[bg],
+        'fontsize': fz,
+        'text': txt,
+    }
+
+def powerline(fg, bg):
+     return {
+        'foreground': colors[fg],
+        'background': colors[bg],
+        'fontsize': 39,
+        'text': '',
+        'padding': -7
+    }
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -19,63 +46,9 @@ def autostart():
     home = os.path.expanduser('~')
     subprocess.Popen([home + '/.config/qtile/autostart.sh'])
 
-keys = [
-    # Switch between windows in current stack pane
-    Key([mod], "k", lazy.layout.down()),
-    Key([mod], "j", lazy.layout.up()),
+keys = keys_main
 
-    # Move windows up or down in current stack
-    Key([mod, "control"], "k", lazy.layout.shuffle_down(), desc="Move window down in current stack "),
-    Key([mod, "control"], "j", lazy.layout.shuffle_up(), desc="Move window up in current stack "),
-
-    # Switch window focus to other pane(s) of stack
-    Key([mod], "space", lazy.layout.next()),
-
-    # Toggle between split and unsplit sides of stack.
-    # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
-    Key([mod, "shift"], "Return", lazy.layout.toggle_split(),desc="Toggle between split and unsplit sides of stack"),
-    # Launch terminal
-    Key([mod], "Return", lazy.spawn(terminal)),
-
-    # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    # Close windows
-    Key([mod, "shift"], "w", lazy.window.kill()),
-
-    #Focus of monitors
-    Key([mod], "comma", lazy.prev_screen()),
-    # Window size
-    Key([mod, "shift"], "k", lazy.layout.grow()),
-    Key([mod, "shift"], "j", lazy.layout.shrink()),
-
-    # Restart qtile
-    Key([mod, "control"], "r", lazy.restart()),
-    # Shutdown qtile 
-    Key([mod, "control"], "q", lazy.shutdown()),
-
-    #Apps
-    Key([mod, "shift"], "m", lazy.spawn('rofi -modi drun,run -show drun -show-icons')),
-    #Browser
-    Key([mod, "shift"], "f", lazy.spawn("firefox-developer-edition")),
-    #Files
-    Key([mod, "shift"], "e", lazy.spawn("thunar")),
-
-    #screenshot
-    Key([mod, "shift"], "p", lazy.spawn("imlib2_grab screenshot.png")),
-
-    # Sound
-    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
-
-    # Brillo
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
-
-]
-
-groups = [Group(i) for i in ["WWW","DEV", "TERM", "MIXED"]]
+groups = [Group(i) for i in ["DEV", "WWW","TERM", "MIXED"]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -87,7 +60,7 @@ for i, group in enumerate(groups):
     ])
 
 layouts = [
-    layout.MonadTall(border_focus="#000000", border_width=1, margin=3),
+    layout.MonadTall(border_focus=colors['c5'], border_width=1, margin=3),
     layout.Max(),
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
@@ -99,14 +72,14 @@ layouts = [
     # layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
-    #layout.Zoomy(),
+    # layout.Zoomy(),
 ]
 
 widget_defaults = dict(
     font="JetBrainsMono NF", 
-    fontsize=13,
+    fontsize=11,
     padding=5,
-    background="#000000"
+    background="#000000",
 )
 extension_defaults = widget_defaults.copy()
 
@@ -115,23 +88,43 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    foreground='#ffffff',
+                    foreground='#000000',
                     active='#ffffff',
                     fontsize=11,
                     borderwidth=1,
                     highlight_method='block',
-                    this_current_screen_border=['#c80ebc', '#c80ebc'],
+                    this_current_screen_border=[colors['c4'], colors['c4']],
                 ),
-                widget.WindowName(),
+                widget.WindowName(fontsize=11),
                 widget.Chord(
                     chords_colors={'launch': ("#ff0000", "#ffffff"),},
                     name_transform=lambda name: name.upper(),
                 ),
+
+                widget.TextBox(**powerline( fg='c1', bg='c0' )),
+                widget.TextBox(**icon( fg='c0', bg='c1', fz=19, txt='' )),
+                widget.TextBox(
+                    text=socket.gethostname(),
+                    foreground='#000000',
+                    background=colors['c1']
+                ),
+
+                widget.TextBox(**powerline( fg='c4', bg='c2' )),
+                widget.TextBox(**icon( fg='c0', bg='c4', fz=19, txt='')),
+                widget.Memory(**base(fg='c0', bg='c4')),
+
+                widget.TextBox(**powerline( fg='c5', bg='c4' )),
+                widget.TextBox(**icon( fg='c0', bg='c5', fz=19, txt='')),
+                widget.Clock(
+                    **base(fg='c0', bg='c5'),
+                    format='%b %d [%I:%M %p]'
+                ),
+
+                widget.TextBox(**powerline( fg='c0', bg='c5' )),
                 widget.Systray(),
-                widget.CurrentLayout(),
-                widget.Clock(format='%Y-%m-%d'),
             ],
-            19,
+            17,
+            opacity=0.9
         ),
     ),
 ]

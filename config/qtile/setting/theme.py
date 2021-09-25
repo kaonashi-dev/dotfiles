@@ -1,8 +1,9 @@
 colors = {
-   'color0': '#000000',
-   'color1': '#b0f2b4',
-   'color2': '#baf2e9',
-   'color3': '#bad7f2',
-   'color4': '#f2bac9',
-   'color5': '#f2e2ba',
+   'color1': '#000000',
+   'color2': '#141B41',
+   'color3': '#306BAC',
+   'color4': '#6F9CEB',
+   'color5': '#98B9F2',
+   'color6': '#918EF4',
+   'color7': '#FFFFFF',
 }

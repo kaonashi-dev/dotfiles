@@ -4,16 +4,15 @@
 from typing import List
 
 import os
-import subprocess
 import socket
+import subprocess
 
 from setting.theme import colors
 from setting.keys import keys_main
 
 from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 
 def base(fg, bg): 
     return {
@@ -39,7 +38,6 @@ def powerline(fg, bg):
     }
 
 mod = "mod4"
-terminal = guess_terminal()
 
 @hook.subscribe.startup_once
 def autostart():
@@ -51,28 +49,19 @@ keys = keys_main
 groups = [Group(i) for i in ["DEV", "WWW","TERM", "MIXED"]]
 
 for i, group in enumerate(groups):
-    actual_key = str(i + 1)
+    actual_key = str(i+ 1)
     keys.extend([
-        # Switch to workspace N
+
+        # mod1 + letter of group = switch to group
         Key([mod], actual_key, lazy.group[group.name].toscreen()),
-        # Send window to workspace N
-        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
+
+        # mod1 + shift + letter of group = switch to & move focused window to group
+        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name, switch_group=True)),
     ])
 
 layouts = [
-    layout.MonadTall(border_focus=colors['c5'], border_width=1, margin=3),
+    layout.MonadTall(border_focus=[colors['color5'], colors['color5']], border_width=1, margin=3),
     layout.Max(),
-    # layout.Stack(num_stacks=2),
-    # Try more layouts by unleashing below layouts.
-    # layout.Bsp(),
-    # layout.Columns(),
-    # layout.Matrix(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    # layout.TreeTab(),
-    # layout.VerticalTile(),
-    # layout.Zoomy(),
 ]
 
 widget_defaults = dict(
@@ -93,7 +82,7 @@ screens = [
                     fontsize=11,
                     borderwidth=1,
                     highlight_method='block',
-                    this_current_screen_border=[colors['c4'], colors['c4']],
+                    this_current_screen_border=[colors['color4'], colors['color4']],
                 ),
                 widget.WindowName(fontsize=11),
                 widget.Chord(
@@ -101,26 +90,26 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
 
-                widget.TextBox(**powerline( fg='c1', bg='c0' )),
-                widget.TextBox(**icon( fg='c0', bg='c1', fz=19, txt='' )),
+                widget.TextBox(**powerline( fg='color1', bg='color0' )),
+                widget.TextBox(**icon( fg='color0', bg='color1', fz=19, txt='' )),
                 widget.TextBox(
                     text=socket.gethostname(),
                     foreground='#000000',
-                    background=colors['c1']
+                    background=colors['color1']
                 ),
 
-                widget.TextBox(**powerline( fg='c4', bg='c2' )),
-                widget.TextBox(**icon( fg='c0', bg='c4', fz=19, txt='')),
-                widget.Memory(**base(fg='c0', bg='c4')),
+                widget.TextBox(**powerline( fg='color4', bg='color2' )),
+                widget.TextBox(**icon( fg='color0', bg='color4', fz=19, txt='')),
+                widget.Memory(**base(fg='color0', bg='color4')),
 
-                widget.TextBox(**powerline( fg='c5', bg='c4' )),
-                widget.TextBox(**icon( fg='c0', bg='c5', fz=19, txt='')),
+                widget.TextBox(**powerline( fg='color5', bg='color4' )),
+                widget.TextBox(**icon( fg='color0', bg='color5', fz=19, txt='')),
                 widget.Clock(
-                    **base(fg='c0', bg='c5'),
+                    **base(fg='color0', bg='color5'),
                     format='%b %d [%I:%M %p]'
                 ),
 
-                widget.TextBox(**powerline( fg='c0', bg='c5' )),
+                widget.TextBox(**powerline( fg='color0', bg='color5' )),
                 widget.Systray(),
             ],
             17,
@@ -138,28 +127,24 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
-main = None  # WARNING: this is deprecated and will be removed soon
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
-    {'wmclass': 'confirm'},
-    {'wmclass': 'dialog'},
-    {'wmclass': 'download'},
-    {'wmclass': 'error'},
-    {'wmclass': 'file_progress'},
-    {'wmclass': 'notification'},
-    {'wmclass': 'splash'},
-    {'wmclass': 'toolbar'},
-    {'wmclass': 'confirmreset'},  # gitk
-    {'wmclass': 'makebranch'},  # gitk
-    {'wmclass': 'maketag'},  # gitk
-    {'wname': 'branchdialog'},  # gitk
-    {'wname': 'pinentry'},  # GPG key password entry
-    {'wmclass': 'ssh-askpass'},  # ssh-askpass
+    *layout.Floating.default_float_rules,
+    Match(wm_class='confirmreset'),  # gitk
+    Match(wm_class='makebranch'),  # gitk
+    Match(wm_class='maketag'),  # gitk
+    Match(wm_class='ssh-askpass'),  # ssh-askpass
+    Match(title='branchdialog'),  # gitk
+    Match(title='pinentry'),  # GPG key password entry
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
+reconfigure_screens = True
+
+
+auto_minimize = True
 
 wmname = "LG3D"

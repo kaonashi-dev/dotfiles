@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cbatticon &
+
 volumeicon &
 
 picom &

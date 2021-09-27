@@ -90,26 +90,26 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
 
-                widget.TextBox(**powerline( fg='color1', bg='color0' )),
-                widget.TextBox(**icon( fg='color0', bg='color1', fz=19, txt='' )),
+                widget.TextBox(**powerline( fg='color3', bg='color1' )),
+                widget.TextBox(**icon( fg='color1', bg='color3', fz=19, txt='' )),
                 widget.TextBox(
                     text=socket.gethostname(),
                     foreground='#000000',
-                    background=colors['color1']
+                    background=colors['color3']
                 ),
 
-                widget.TextBox(**powerline( fg='color4', bg='color2' )),
-                widget.TextBox(**icon( fg='color0', bg='color4', fz=19, txt='')),
-                widget.Memory(**base(fg='color0', bg='color4')),
+                widget.TextBox(**powerline( fg='color4', bg='color3' )),
+                widget.TextBox(**icon( fg='color1', bg='color4', fz=19, txt='')),
+                widget.Memory(**base(fg='color1', bg='color4')),
 
                 widget.TextBox(**powerline( fg='color5', bg='color4' )),
-                widget.TextBox(**icon( fg='color0', bg='color5', fz=19, txt='')),
+                widget.TextBox(**icon( fg='color1', bg='color5', fz=19, txt='')),
                 widget.Clock(
-                    **base(fg='color0', bg='color5'),
+                    **base(fg='color1', bg='color5'),
                     format='%b %d [%I:%M %p]'
                 ),
 
-                widget.TextBox(**powerline( fg='color0', bg='color5' )),
+                widget.TextBox(**powerline( fg='color1', bg='color5' )),
                 widget.Systray(),
             ],
             17,

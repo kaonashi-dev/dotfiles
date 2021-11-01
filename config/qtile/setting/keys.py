@@ -40,8 +40,10 @@ keys_main = [
 
    #Apps
    Key([mod, "shift"], "m", lazy.spawn('rofi -modi drun,run -show drun -show-icons')),
-   #Browser
+   #Firefox
    Key([mod, "shift"], "f", lazy.spawn("firefox-developer-edition")),
+   #Brave
+   Key([mod, "shift"], "b", lazy.spawn("brave")),
    #Files
    Key([mod, "shift"], "e", lazy.spawn("thunar")),
    #screenshot

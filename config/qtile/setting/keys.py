@@ -42,6 +42,8 @@ keys_main = [
    Key([mod, "shift"], "m", lazy.spawn('rofi -modi drun,run -show drun -show-icons')),
    #Firefox
    Key([mod, "shift"], "f", lazy.spawn("firefox-developer-edition")),
+   #Visual studio code
+   Key([mod, "shift"], "c", lazy.spawn("code")),
    #Brave
    Key([mod, "shift"], "b", lazy.spawn("brave")),
    #Files

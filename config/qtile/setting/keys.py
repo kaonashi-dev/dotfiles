@@ -48,8 +48,11 @@ keys_main = [
    Key([mod, "shift"], "b", lazy.spawn("brave")),
    #Files
    Key([mod, "shift"], "e", lazy.spawn("thunar")),
+   #Slack
+   Key([mod, "shift"], "k", lazy.spawn("slack")),
    #screenshot
-   Key([mod, "shift"], "p", lazy.spawn("imlib2_grab screenshot.png")),
+   Key([mod, "shift"], "p", lazy.spawn("kazam -p")), # All screeen
+   Key([mod, "control"], "p", lazy.spawn("kazam -p")), # crurent window
    
    # Sound
    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),

@@ -63,7 +63,7 @@ for i, group in enumerate(groups):
 
 layouts = [
     layout.MonadTall(
-        border_focus=[colors['color2'], colors['color2']], border_width=1, margin=5),
+        border_width=0, margin=7),
     layout.Max(),
 ]
 

@@ -47,7 +47,7 @@ def autostart():
 
 keys = keys_main
 
-groups = [Group(i) for i in ["DEV", "WWW", "TERM", "MIXED"]]
+groups = [Group(i) for i in ["DEV", "WWW", "TERM", "OFFICE", "MIXED"]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -116,8 +116,9 @@ screens = [
             widget.Systray(),
         ],
             17,
-            opacity=0.9
-            # margin=3,
+            margin=[3, 9, 1, 9],
+            background="#00000000",
+            opacity=0.7
         ),
     ),
 ]

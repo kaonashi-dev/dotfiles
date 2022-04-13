@@ -17,6 +17,4 @@ picom &
 
 nm-applet &
 
-# trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 0 --tint 0xFFCCCCCC --height 20 --margin 30
-
 nitrogen --restore

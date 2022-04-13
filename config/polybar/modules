@@ -1,8 +1,0 @@
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/name]
-type = custom/text
-
-content = " "
-content-prefix-font = 0
-content-prefix-foreground = ${color.RED}

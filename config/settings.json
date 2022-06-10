@@ -1,0 +1,87 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Tokyo Night",
+    "window.title": "${appName}",
+    "editor.minimap.enabled": false,
+    "workbench.sideBar.location": "right",
+    "editor.fontSize": 19,
+    "editor.fontFamily": "JetBrainsMono NF",
+    "workbench.colorCustomizations": {
+        "[Dobri Next -A02- Bunker]": {},
+        "editor.background": "#000",
+        "editorGroupHeader.tabsBorder": "#030303",
+        "editorGroupHeader.tabsBackground": "#000000",
+        "editor.lineHighlightBackground": "#f8f8f809",
+        "editor.lineHighlightBorder": "#df10100b",
+        "editorGutter.background": "#000000",
+        "editorSuggestWidget.border": "#000000",
+        "editorSuggestWidget.background": "#111111",
+        "sideBar.background": "#000",
+        "sideBar.border": "#000000",
+        "activityBar.background": "#000000",
+        "activityBar.border": "#000000",
+        "activityBar.activeBorder": "#261826",
+        "menu.background": "#000000",
+        "tab.activeBackground": "#000000",
+        "tab.inactiveBackground": "#000000",
+        "tab.border": "#000000",
+        "tab.activeBorderTop": "#4e4e4e",
+        "sideBarTitle.foreground": "#f5f3f3",
+        "sideBarSectionHeader.background": "#000000",
+        "statusBar.background": "#000000",
+        "statusBar.border": "#000000",
+        "breadcrumb.background": "#000000",
+        "terminal.background": "#000000",
+        "panel.background": "#000000",
+        "welcomePage.background": "#000000",
+        "scrollbarSlider.background": "#0e0d0d"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
+    "editor.tabSize": 3,
+    "editor.suggestSelection": "first",
+    "html.format.wrapLineLength": 300,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "[html]": {
+        "editor.wordWrap": "off",
+        "editor.wordWrapColumn": 300,
+        "editor.wrappingIndent": "none",
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.wordWrapColumn": 300,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "dart.lineLength": 199,
+    "[dart]": {
+        "editor.rulers": [
+            199
+        ],
+    },
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.inlineSuggest.enabled": true,
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": false,
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": 1,
+    
+}

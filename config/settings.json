@@ -1,6 +1,6 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "window.title": "${appName}",
     "editor.minimap.enabled": false,
     "workbench.sideBar.location": "right",

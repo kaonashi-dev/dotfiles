@@ -9,12 +9,12 @@ fi
 
 setxkbmap us -variant intl
 
-picom &
-
 volumeicon &
 
-picom &
+cbatticon &
 
-nm-applet &
+nm-tray &
+
+picom &
 
 nitrogen --restore

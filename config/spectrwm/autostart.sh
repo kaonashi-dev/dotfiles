@@ -13,8 +13,8 @@ volumeicon &
 
 cbatticon &
 
-nm-tray &
-
 picom &
+
+nm-tray &
 
 nitrogen --restore

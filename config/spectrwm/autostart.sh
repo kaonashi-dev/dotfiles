@@ -9,9 +9,9 @@ fi
 
 setxkbmap us -variant intl
 
-volumeicon &
+# volumeicon &
 
-cbatticon &
+# cbatticon &
 
 picom &
 

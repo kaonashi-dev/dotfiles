@@ -1,13 +1,15 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "window.menuBarVisibility": "toggle",
     "window.title": "${appName}",
     "editor.minimap.enabled": false,
     "workbench.sideBar.location": "right",
-    "editor.fontSize": 19,
+    "workbench.activityBar.visible": false,
+    "editor.fontSize": 25,
+    "window.zoomLevel": 1,
     "editor.fontFamily": "JetBrainsMono NF",
     "workbench.colorCustomizations": {
-        "[Dobri Next -A02- Bunker]": {},
+    "[Gruvbox Dark Hard]": {},
         "editor.background": "#000",
         "editorGroupHeader.tabsBorder": "#030303",
         "editorGroupHeader.tabsBackground": "#000000",
@@ -36,52 +38,44 @@
         "welcomePage.background": "#000000",
         "scrollbarSlider.background": "#0e0d0d"
     },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs":"active",
+    "material-icon-theme.activeIconPack": "nest",
     "editor.tabSize": 3,
     "editor.suggestSelection": "first",
-    "html.format.wrapLineLength": 300,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
     },
+    "workbench.startupEditor": "none",
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
     "[html]": {
-        "editor.wordWrap": "off",
-        "editor.wordWrapColumn": 300,
-        "editor.wrappingIndent": "none",
         "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode",
+        "editor.tabSize": 2,
     },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[typescript]": {
-        "editor.wordWrapColumn": 300,
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "dart.lineLength": 199,
-    "[dart]": {
-        "editor.rulers": [
-            199
-        ],
-    },
-    "workbench.startupEditor": "none",
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.inlineSuggest.enabled": true,
-    "dart.debugExternalPackageLibraries": true,
-    "dart.debugSdkLibraries": false,
     "[vue]": {
         "editor.defaultFormatter": "Vue.volar"
     },
-    "window.menuBarVisibility": "toggle",
-    "workbench.activityBar.visible": false,
-    "window.zoomLevel": 1,
-    
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "GrunBoxTheme",
 }

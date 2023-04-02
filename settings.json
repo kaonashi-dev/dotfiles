@@ -1,13 +1,16 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "window.menuBarVisibility": "toggle",
     "window.title": "${appName}",
     "editor.minimap.enabled": false,
     "workbench.sideBar.location": "right",
-    "workbench.activityBar.visible": false,
     "editor.fontSize": 25,
-    "window.zoomLevel": 1,
     "editor.fontFamily": "JetBrainsMono NF",
+    "workbench.colorTheme": "★★★★★ GRUVBOX ★★★★★",
+    "editor.inlineSuggest.enabled": true,
+    "svelte.enable-ts-plugin": true,
+    "window.zoomLevel": 1,
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
     "[Gruvbox Dark Hard]": {},
         "editor.background": "#000",
@@ -69,7 +72,7 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[vue]": {
         "editor.defaultFormatter": "Vue.volar"
@@ -77,5 +80,16 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "GrunBoxTheme",
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "[dart]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnType": true,
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    }
 }

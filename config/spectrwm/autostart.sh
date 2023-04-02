@@ -13,6 +13,8 @@ volumeicon &
 
 cbatticon &
 
+applet &
+
 picom &
 
 dunst &

@@ -70,7 +70,7 @@ yay -S sweet-gtk-theme-dark sweet-folders-icons --noconfirm
 ## Uso
 ```bash
 cd ~
-git clone https://github.com/whoami-coder/dotfiles
+git clone https://github.com/kaonashi-dev/dotfiles
 ```
 
 ## Contribución

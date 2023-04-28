@@ -1,15 +1,18 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "window.title": "${appName}",
+    "explorer.openEditors.visible": 0,
+    "breadcrumbs.enabled": false,
     "editor.minimap.enabled": false,
-    "workbench.sideBar.location": "right",
     "editor.fontSize": 25,
-    "editor.fontFamily": "JetBrainsMono NF",
-    "workbench.colorTheme": "★★★★★ GRUVBOX ★★★★★",
     "editor.inlineSuggest.enabled": true,
+    "editor.fontFamily": "JetBrainsMono NF",
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Codely Dark",
     "svelte.enable-ts-plugin": true,
-    "window.zoomLevel": 1,
     "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 1,
+    "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
     "[Gruvbox Dark Hard]": {},
@@ -56,7 +59,7 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+        "editor.defaultFormatter": "vscode.html-language-features",
     },
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -85,14 +88,15 @@
     },
     "[dart]": {
         "editor.formatOnSave": false,
-        "editor.formatOnType": true,
+        "editor.formatOnType": false,
         "editor.selectionHighlight": false,
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false,
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
     },
+    "dart.lineLength": 150,
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
@@ -100,5 +104,5 @@
         "markdown": false,
         "scminput": false,
         "dart": false
-    }
+    },
 }

@@ -2,107 +2,85 @@
     "workbench.iconTheme": "material-icon-theme",
     "window.title": "${appName}",
     "explorer.openEditors.visible": 0,
-    "breadcrumbs.enabled": false,
     "editor.minimap.enabled": false,
-    "editor.fontSize": 25,
-    "editor.inlineSuggest.enabled": true,
+    "editor.fontSize": 20,
     "editor.fontFamily": "JetBrainsMono NF",
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "Codely Dark",
     "svelte.enable-ts-plugin": true,
     "window.menuBarVisibility": "toggle",
-    "window.zoomLevel": 1,
     "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": false,
-    "workbench.colorCustomizations": {
-    "[Gruvbox Dark Hard]": {},
-        "editor.background": "#000",
-        "editorGroupHeader.tabsBorder": "#030303",
-        "editorGroupHeader.tabsBackground": "#000000",
-        "editor.lineHighlightBackground": "#f8f8f809",
-        "editor.lineHighlightBorder": "#df10100b",
-        "editorGutter.background": "#000000",
-        "editorSuggestWidget.border": "#000000",
-        "editorSuggestWidget.background": "#111111",
-        "sideBar.background": "#000",
-        "sideBar.border": "#000000",
-        "activityBar.background": "#000000",
-        "activityBar.border": "#000000",
-        "activityBar.activeBorder": "#261826",
-        "menu.background": "#000000",
-        "tab.activeBackground": "#000000",
-        "tab.inactiveBackground": "#000000",
-        "tab.border": "#000000",
-        "tab.activeBorderTop": "#4e4e4e",
-        "sideBarTitle.foreground": "#f5f3f3",
-        "sideBarSectionHeader.background": "#000000",
-        "statusBar.background": "#000000",
-        "statusBar.border": "#000000",
-        "breadcrumb.background": "#000000",
-        "terminal.background": "#000000",
-        "panel.background": "#000000",
-        "welcomePage.background": "#000000",
-        "scrollbarSlider.background": "#0e0d0d"
-    },
-    "material-icon-theme.activeIconPack": "nest",
+    "breadcrumbs.enabled": false,
+    "zenMode.hideTabs": false,
+    "editor.lineHeight": 1.5,
     "editor.tabSize": 3,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
     },
     "workbench.startupEditor": "none",
     "[scss]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
+      "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features",
+      "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
     "[astro]": {
-        "editor.defaultFormatter": "astro-build.astro-vscode",
-        "editor.tabSize": 2,
+      "editor.defaultFormatter": "astro-build.astro-vscode",
+      "editor.tabSize": 2
     },
     "[css]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
+      "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[vue]": {
-        "editor.defaultFormatter": "Vue.volar"
+      "editor.defaultFormatter": "Vue.volar"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[svelte]": {
-        "editor.defaultFormatter": "svelte.svelte-vscode"
+      "editor.defaultFormatter": "svelte.svelte-vscode"
     },
     "[dart]": {
-        "editor.formatOnSave": false,
-        "editor.formatOnType": false,
-        "editor.selectionHighlight": false,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false,
-        "editor.tabSize": 2,
+      "editor.formatOnSave": false,
+      "editor.formatOnType": false,
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": false,
+      "editor.tabSize": 2
     },
-    "dart.lineLength": 150,
     "github.copilot.enable": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-        "dart": false
+      "*": true,
+      "plaintext": false,
+      "markdown": false,
+      "scminput": false,
+      "dart": false
     },
-}
+    "editor.inlineSuggest.enabled": true,
+    "terminal.integrated.tabFocusMode": false,
+    "[dockercompose]": {
+      "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "window.zoomLevel": 1,
+    "explorer.confirmDelete": false,
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  }
+  

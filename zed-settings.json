@@ -1,0 +1,35 @@
+{
+   "show_inline_completions": true,
+   "assistant": {
+      "default_model": {
+         "provider": "copilot_chat",
+         "model": "gpt-4o"
+      },
+      "version": "2"
+   },
+   "theme": "Gruvbox Dark Hard",
+   "ui_font_size": 15,
+   "buffer_font_size": 15.5,
+   "ui_font_family": "JetBrainsMono Nerd Font",
+   "buffer_font_family": "JetBrainsMono Nerd Font",
+   "tab_size": 3,
+   "format_on_save": "off",
+   "ensure_final_newline_on_save": false,
+   "base_keymap": "JetBrains",
+   "soft_wrap": "none",
+   "preferred_line_length": 150,
+   "languages": {
+      "PHP": {
+         "language_servers": ["intelephense", "!phpactor"]
+      },
+      "TypeScript": {
+         "tab_size": 2,
+         "format_on_save": "off"
+      }
+   },
+   "toolbar": {
+      "quick_actions": false,
+      "selections_menu": false
+   },
+   "confirm_quit": true
+}

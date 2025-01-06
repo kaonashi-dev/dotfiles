@@ -1,4 +1,4 @@
-# My Dotfiles
+# Dotfiles
 
 This repository contains my configuration files for my work environment (ArchLinux). It includes settings for my window manager, as well as a list of applications I need to install and how to configure them.
 

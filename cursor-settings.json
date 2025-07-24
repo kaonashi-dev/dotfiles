@@ -1,86 +1,15 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "window.title": "${appName}",
-    "explorer.openEditors.visible": 0,
-    "editor.minimap.enabled": false,
-    "editor.fontSize": 20,
-    "editor.fontFamily": "JetBrainsMono NF",
-    "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "Codely Dark",
-    "svelte.enable-ts-plugin": true,
-    "window.menuBarVisibility": "toggle",
-    "workbench.statusBar.visible": false,
-    "workbench.activityBar.visible": false,
-    "breadcrumbs.enabled": false,
-    "zenMode.hideTabs": false,
-    "editor.lineHeight": 1.5,
-    "editor.tabSize": 3,
-    "editor.suggestSelection": "first",
-    "files.exclude": {
-      "**/.classpath": true,
-      "**/.project": true,
-      "**/.settings": true,
-      "**/.factorypath": true
-    },
-    "workbench.startupEditor": "none",
-    "[scss]": {
-      "editor.defaultFormatter": "vscode.css-language-features"
-    },
-    "[html]": {
-      "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[php]": {
-      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    },
-    "[astro]": {
-      "editor.defaultFormatter": "astro-build.astro-vscode",
-      "editor.tabSize": 2
-    },
-    "[css]": {
-      "editor.defaultFormatter": "vscode.css-language-features"
-    },
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[vue]": {
-      "editor.defaultFormatter": "Vue.volar"
-    },
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[svelte]": {
-      "editor.defaultFormatter": "svelte.svelte-vscode"
-    },
-    "[dart]": {
-      "editor.formatOnSave": false,
-      "editor.formatOnType": false,
-      "editor.selectionHighlight": false,
-      "editor.suggest.snippetsPreventQuickSuggestions": false,
-      "editor.suggestSelection": "first",
-      "editor.tabCompletion": "onlySnippets",
-      "editor.wordBasedSuggestions": false,
-      "editor.tabSize": 2
-    },
-    "github.copilot.enable": {
-      "*": true,
-      "plaintext": false,
-      "markdown": false,
-      "scminput": false,
-      "dart": false
-    },
-    "editor.inlineSuggest.enabled": true,
-    "terminal.integrated.tabFocusMode": false,
-    "[dockercompose]": {
-      "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    },
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "window.zoomLevel": 1,
-    "explorer.confirmDelete": false,
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
-  }
-  
+  "window.title": "${appName}",
+  "window.commandCenter": true,
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "editor.codeActionsOnSave": {},
+  "editor.fontSize": 17,
+  "editor.fontFamily": "JetBrainsMono NF",
+  "editor.fontLigatures": true,
+  "workbench.statusBar.visible": false,
+  "breadcrumbs.enabled": false,
+  "cursor.composer.shouldAutoAcceptDiffs": false,
+  "workbench.settings.applyToAllProfiles": [],
+  "phpunit.postTask": ""
+}

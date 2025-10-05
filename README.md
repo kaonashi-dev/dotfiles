@@ -35,6 +35,11 @@ yay -S geeqie vlc --noconfirm
 ```bash
 yay -S sweet-gtk-theme-dark sweet-folders-icons --noconfirm
 ```
+### Neovim
+```bash
+yay -S neovim ripgrep --noconfirm
+```
+
 ### Software Applications
 
 | Software                                                                                            | Utility                        |

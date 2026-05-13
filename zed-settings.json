@@ -1,35 +1,133 @@
 {
-   "show_inline_completions": true,
-   "assistant": {
-      "default_model": {
-         "provider": "copilot_chat",
-         "model": "gpt-4o"
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+  },
+  "rounded_selection": true,
+  "minimum_contrast_for_highlights": 0.0,
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "lsp": {
+    "oxc": {
+      "binary": {
+        "path": "oxlint",
+        "arguments": ["--lsp"],
       },
-      "version": "2"
-   },
-   "theme": "Gruvbox Dark Hard",
-   "ui_font_size": 15,
-   "buffer_font_size": 15.5,
-   "ui_font_family": "JetBrainsMono Nerd Font",
-   "buffer_font_family": "JetBrainsMono Nerd Font",
-   "tab_size": 3,
-   "format_on_save": "off",
-   "ensure_final_newline_on_save": false,
-   "base_keymap": "JetBrains",
-   "soft_wrap": "none",
-   "preferred_line_length": 150,
-   "languages": {
-      "PHP": {
-         "language_servers": ["intelephense", "!phpactor"]
+    },
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "theme": "Gruvbox Dark Hard",
+  "title_bar": {
+    "show_branch_status_icon": false,
+    "show_user_picture": false,
+    "show_sign_in": false,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
+    "show_menus": false,
+    "show_user_menu": false,
+  },
+  "tab_bar": {
+    "show": false,
+  },
+  "gutter": {
+    "min_line_number_digits": 0,
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "status_bar": {
+    "experimental.show": false,
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  "project_panel": {
+    "dock": "left",
+    "sticky_scroll": false,
+    "scrollbar": {
+      "show": "never",
+    },
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "file_finder": {
+    "modal_max_width": "large",
+  },
+  "ui_font_size": 13,
+  "buffer_font_size": 15,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "icon_theme": "JetBrains Icons Dark",
+  "base_keymap": "JetBrains",
+  "format_on_save": "off",
+  "restore_on_startup": "last_session",
+  "on_last_window_closed": "quit_app",
+  "when_closing_with_no_tabs": "close_window",
+  "languages": {
+    "TypeScript": {
+      "language_servers": ["oxc", "vtsls", "!eslint"],
+    },
+    "TSX": {
+      "language_servers": ["oxc", "vtsls", "!eslint"],
+    },
+    "JavaScript": {
+      "language_servers": ["oxc", "vtsls", "!eslint"],
+    },
+  },
+  "theme_overrides": {
+    "Gruvbox Dark Hard": {
+      "accents": [
+        "#cc241dff",
+        "#98971aff",
+        "#d79921ff",
+        "#458588ff",
+        "#b16286ff",
+        "#689d6aff",
+        "#d65d0eff",
+      ],
+      "border": "#404040B3",
+      "border.transparent": "#C70C0C00",
+      "elevated_surface.background": "#1F1F1FFF",
+      "surface.background": "#1F1F1FFF",
+      "background": "#1F1F1FFF",
+      "status_bar.background": "#1F1F1FFF",
+      "title_bar.background": "#1F1F1FFF",
+      "toolbar.background": "#1F1F1FFF",
+      "tab_bar.background": "#1F1F1FFF",
+      "tab.inactive_background": "#1F1F1FFF",
+      "tab.active_background": "#1F1F1FFF",
+      "search.match_background": "#F5F5F536",
+      "panel.background": "#1F1F1FFF",
+      "panel.focused_border": "#6CACBDE6",
+      "editor.foreground": "#C7C7C7FF",
+      "editor.background": "#1F1F1FFF",
+      "editor.gutter.background": "#1F1F1FFF",
+      "editor.subheader.background": "#1F1F1FFF",
+      "editor.highlighted_line.background": "#1F1F1FFF",
+      "editor.line_number": "#696B6AFF",
+      "terminal.background": "#1F1F1FFF",
+      "terminal.foreground": "#C7C7C7FF",
+      "version_control.added": "#46BB26FF",
+      "syntax": {
+        "comment": {
+          "color": "#696969FF",
+        },
+        "comment.doc": {
+          "color": "#696969FF",
+        },
       },
-      "TypeScript": {
-         "tab_size": 2,
-         "format_on_save": "off"
-      }
-   },
-   "toolbar": {
-      "quick_actions": false,
-      "selections_menu": false
-   },
-   "confirm_quit": true
+      "panel.overlay_background": "#1F1F1FFF",
+      "panel.overlay_hover": "#1F1F1FFF",
+    },
+  },
 }
